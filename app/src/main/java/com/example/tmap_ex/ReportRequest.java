@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReportRequest extends StringRequest {
-    final static private String URL = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/ReportRequest.php";
+    final static private String URL = "";
     private Map<String, String> parameters;
 
     public ReportRequest(String report_category, String report_latitude, String report_longitude, Response.Listener<String> listener, Response.ErrorListener errorListener) {
