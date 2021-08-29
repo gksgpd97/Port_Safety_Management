@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements TMapGpsManager.on
     private TMapGpsManager tmapgps = null;
     private TMapView tmapview = null;
     private TMapPoint currentPoint = null;
-    private static String mApiKey = "l7xx54970a28096b40faaf92b3017b524f8c";
+    private static String mApiKey = "";
     private static int mMarkerID;
     private String mJsonString;
     private static final String TAG_JSON="webnautes";
@@ -402,9 +402,9 @@ public class MainActivity extends AppCompatActivity implements TMapGpsManager.on
             tmapview.removeAllMarkerItem();
         }
         GetData task = new GetData();
-        task.execute("http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/ReportPointsRequest.php");
+        task.execute("");
         GetGasData gasTask = new GetGasData();
-        gasTask.execute("http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/GasValueRequest.php");
+        gasTask.execute("");
         //나중에 센서 위치 가져오고 지도에 표시하는 태스크 execute하는 코드 넣으면 됨.
     }
 
@@ -770,7 +770,7 @@ public class MainActivity extends AppCompatActivity implements TMapGpsManager.on
         @Override
         protected  void onPreExecute() {
             try {
-                target = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/token_request.php";
+                target = "";
                 Log.d(TAG,"try");
             } catch (Exception e) {
                 e.printStackTrace();
