@@ -52,7 +52,7 @@ public class StatsActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    private static String mApiKey = "l7xx54970a28096b40faaf92b3017b524f8c";
+    private static String mApiKey = "";
     private TMapData tmapdata;
     private TMapPoint tMapPoint;
     private String address;
@@ -168,10 +168,10 @@ public class StatsActivity extends AppCompatActivity {
         @Override
         protected  void onPreExecute() {
             try {
-                target = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/StatsReportRequest.php";
+                target = "";
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.d("printStackTrace","왜안돼");
+                Log.d("printStackTrace","에러");
             }
         }
 
@@ -323,7 +323,7 @@ public class StatsActivity extends AppCompatActivity {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.d("printStackTrace","왜안돼2");
+                Log.d("printStackTrace","에러");
             }
 
         }
@@ -352,7 +352,7 @@ public class StatsActivity extends AppCompatActivity {
                 return stringBuilder.toString().trim();
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.d("printStackTrace","왜안돼3");            }
+                Log.d("printStackTrace","에러");            }
             return null;
         }
 
