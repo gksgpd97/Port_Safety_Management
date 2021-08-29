@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                         SaveSharedPreference.setUserName(LoginActivity.this, user_id);
 
                         queue = Volley.newRequestQueue(LoginActivity.this);
-                        String url = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/TokenSend.php";
+                        String url = "";
 
                         final StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                             @Override
@@ -195,7 +195,7 @@ public class LoginActivity extends AppCompatActivity {
         protected  void onPreExecute() {
             try {
                 Log.d("TAG: ",user_id);
-                target = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/TokenRequest.php?user_id=" + URLEncoder.encode(user_id, "UTF-8");
+                target = "" + URLEncoder.encode(user_id, "UTF-8");
                 Log.d("TAG: ","try");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -219,7 +219,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(!user_token.equals(get_token)) {
                     queue = Volley.newRequestQueue(LoginActivity.this);
-                    String url = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/TokenSend.php";
+                    String url = "";
 
                     final StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                         @Override
