@@ -69,7 +69,7 @@ public class ReportActivity extends AppCompatActivity {
     private boolean m_bTrackingMode = true;
     private TMapGpsManager tmapgps = null;
     private TMapView tmapview = null;
-    private static String mApiKey = "l7xx54970a28096b40faaf92b3017b524f8c";
+    private static String mApiKey = "";
     private TMapPoint currentPoint = null;
     private TMapPoint reportPoint = null;
     private double cur_latitude, cur_longitude;
@@ -323,7 +323,7 @@ public class ReportActivity extends AppCompatActivity {
         @Override
         protected  void onPreExecute() {
             try {
-                target = "http://ec2-18-216-239-216.us-east-2.compute.amazonaws.com/token_request.php";
+                target = "";
                 Log.d(TAG,"try");
             } catch (Exception e) {
                 e.printStackTrace();
